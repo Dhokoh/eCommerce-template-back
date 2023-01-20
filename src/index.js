@@ -1,12 +1,16 @@
 require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
+const bodyParser = require('body-parser');
 
 const app = express();
+app.use(bodyParser.json());
 
+const {dbConnection} = require('./config/db');
+dbConnection();
 
 app.listen(process.env.PORT, ()=>{
-    console.log('API on');
+    console.log(`API on. Connected port: ${process.env.PORT}`);
 });
 
 app.use(cors())
