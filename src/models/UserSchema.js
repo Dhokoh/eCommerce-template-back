@@ -13,6 +13,10 @@ const userSchema = mongoose.Schema(
         phoneNumber:{
           type: String,
         },
+        country: {
+            type: String,
+            require: true
+        },
         email: {
             type: String,
             require: true
