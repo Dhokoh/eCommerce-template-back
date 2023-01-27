@@ -25,5 +25,5 @@ app.get('/', (req, res) => {
 //localhost:5000/users
 app.use('/users', require('../src/routers/users.routers.js'));
 
-//localhost:5000/shopping
-app.use('/shopping', require('../src/routers/sales.routers'))
+//localhost:5000/products
+app.use('/products', require('../src/routers/products.routers'))

@@ -6,12 +6,12 @@ const productSchema = mongoose.Schema(
             type: String,
             require: true
         },
-        referenceNumber: {
+        reference: {
             type: String,
             require: true
         },
         availableStock:{
-            type: String,
+            type: Integer,
             require: true
         },
         image:{
