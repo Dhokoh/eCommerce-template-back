@@ -12,7 +12,7 @@ const addProduct = async (req, res) => {
     console.log('A new product has been added to the inventory');
 }
 
-const deleteProduct = async (req, res) => {
+const deleteProduct = async (req, res) => { //untested
     const product2Delete = await product.findByIdAndDelete(req.body);
     res.then(()=>{
         console.log('A product has been deleted')
