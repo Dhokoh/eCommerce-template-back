@@ -26,4 +26,4 @@ const updateProduct = async (req, res) => { //untested
     });
 }
 
-module.exports = {getProducts, addProduct};
+module.exports = {getProducts, addProduct, updateProduct, deleteProduct};
