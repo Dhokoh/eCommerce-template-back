@@ -15,8 +15,15 @@ const addProduct = async (req, res) => {
 const deleteProduct = async (req, res) => { //untested
     const product2Delete = await product.findByIdAndDelete(req.body);
     res.then(()=>{
-        console.log('A product has been deleted')
-    }) 
+        console.log('A product has been deleted');
+    });
+}
+
+const updateProduct = async (req, res) => { //untested
+    const product2Update = await product.findByIdAndUpdate(req.body);
+    res.then(()=>{
+        console.log('A product has been updated');
+    });
 }
 
 module.exports = {getProducts, addProduct};
