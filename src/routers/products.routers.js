@@ -7,3 +7,5 @@ router.get('/', getProducts);
 
 //localhost:PORT/products
 router.post('/', addProduct);
+
+module.exports = router;

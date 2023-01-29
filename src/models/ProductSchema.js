@@ -11,13 +11,13 @@ const productSchema = mongoose.Schema(
             require: true
         },
         availableStock:{
-            type: Integer,
+            type: Number,
             require: true
         },
-        image:{
-            type:"", //what type would go here? 
-            require: true,
-        }
+        // image:{
+        //     type:"", //what type would go here? 
+        //     require: true,
+        // }
     }
 );
 
