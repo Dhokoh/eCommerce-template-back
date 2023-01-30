@@ -26,18 +26,6 @@ const createUser = async (req, res) => {
             phoneNumber: phoneNumber,
             country: country
         });
-
-        const payload = {
-            user:{
-                id: newUser._id,
-
-            }
-        }
-
-        jwt.sign(payload, process.env.SECRET, {expiresIn:360000}, (error, token) =>{
-            if (error) throw error;
-            res.json({token}); 
-        })
         
         res.json(newUser);
     }catch{
