@@ -19,15 +19,16 @@ const addProduct = async (req, res) => {
 }
 
 const deleteProduct = async (req, res) => { //untested
-    const {reference, availableStock, name} = req.body
+    // const {reference} = req.body
     const product2Delete = await product.find({reference: reference});
-    if (!product2Delete){
-        console.log('an error happened while deleting product')
-    }
-    const productDeletion = await product.findByIdAndDelete(product2Delete._id);
-    res.then(()=>{
-        console.log('A product has been deleted');
-    });
+    console.log(product2Delete)
+    // if (!product2Delete){
+    //     console.log('an error happened while deleting product')
+    // }
+    // const productDeletion = await product.findByIdAndDelete(product2Delete._id);
+    // res.then(()=>{
+    //     console.log('A product has been deleted');
+    // });
 }
 
 const updateProduct = async (req, res) => { //untested
