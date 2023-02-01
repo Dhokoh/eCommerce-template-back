@@ -14,10 +14,10 @@ const productSchema = mongoose.Schema(
             type: Number,
             require: true
         },
-        // image:{
-        //     type:"", //what type would go here? 
-        //     require: true,
-        // }
+        image:{
+            type: String, 
+            require: false, //to be changed to true
+        }
     }
 );
 

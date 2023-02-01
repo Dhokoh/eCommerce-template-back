@@ -9,9 +9,9 @@ router.get('/', getProducts);
 router.post('/', addProduct);
 
 //localhost:PORT/products/{reference}
-router.delete('/{reference}', deleteProduct);
+router.delete('/:reference', deleteProduct);
 
 //localhost:PORT/products/{reference}
-router.put('/{reference}', updateProduct)
+router.put('/:reference', updateProduct)
 
 module.exports = router;
