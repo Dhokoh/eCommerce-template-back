@@ -8,10 +8,11 @@ const getProducts = async (req, res) => {
 
 const addProduct = async (req, res) => {
     // const newProduct = await product.create(req.body);
-    const {name, reference, availableStock} = req.body;
+    const {name, reference, price, availableStock} = req.body;
     const newProduct = await product.create({
-        name: name,
+        name,
         reference: reference,
+        price,
         availableStock: availableStock
     })
     res.json(newProduct);
