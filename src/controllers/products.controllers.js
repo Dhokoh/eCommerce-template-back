@@ -11,9 +11,9 @@ const addProduct = async (req, res) => {
     const {name, reference, price, availableStock} = req.body;
     const newProduct = await product.create({
         name,
-        reference: reference,
+        reference,
         price,
-        availableStock: availableStock
+        availableStock
     })
     res.json(newProduct);
     console.log('A new product has been added to the inventory');
