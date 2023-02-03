@@ -13,8 +13,9 @@ const addProduct = async (req, res) => {
         name,
         reference,
         price,
-        availableStock
-    })
+        availableStock,
+        image
+    });
     res.json(newProduct);
     console.log('A new product has been added to the inventory');
 }
