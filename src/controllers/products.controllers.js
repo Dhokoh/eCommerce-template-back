@@ -8,7 +8,7 @@ const getProducts = async (req, res) => {
 
 const addProduct = async (req, res) => {
     // const newProduct = await product.create(req.body);
-    const {name, reference, price, availableStock} = req.body;
+    const {name, reference, price, availableStock, image} = req.body;
     const newProduct = await product.create({
         name,
         reference,
